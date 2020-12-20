@@ -1,0 +1,16 @@
+service: twilio-photos-bot-serverless
+frameworkVersion: '2'
+plugins: 
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  sms:
+    handler: handler.sms
+    events: 
+      - httpApi:
+          method: POST
+          path: /sms
