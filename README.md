@@ -2,6 +2,8 @@
 This twilio bot that takes text message images and uploads them directly to a google photos album through a Typescript API hosted on AWS Lambda
 
 ## Setup
+Run ```yarn``` or ```npm install```. Whichever your preffered method is for installing dependencies.
+
 A project needs to be created in Google cloud beforehand. A refresh token also needs to be generated for an Oauth client in the project space. 
 I was able to generate the refresh token programatically (in a separate project space) using "google-auth-library" for NodeJS. In a nutshell, 
 the generateAuthUrl method for an Oauth2Client generates a verification screen, which gives an authorization code. The getToken method can then 
